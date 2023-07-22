@@ -15,7 +15,7 @@ class Main extends PluginBase {
 		$manager = $this->getServer()->getPluginManager();
 
 		$handler = static function (BlockBreakEvent|BlockPlaceEvent $event): void {
-			//if (!$event->isCancelled()) return;
+			if (!$event->isCancelled()) return;
 
 			$player = $event->getPlayer();
 			$session = $player->getNetworkSession();
